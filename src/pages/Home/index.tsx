@@ -4,7 +4,7 @@ import { Container, Input, Title } from "./styled";
 import { TCardPassword } from "../../components/CardPassword/types";
 import { FlatList } from "react-native";
 import { CardPassword } from "../../components/CardPassword";
-
+import { Feather } from "@expo/vector-icons";
 export default function Home() {
   const data: TCardPassword[] = [
     {
@@ -34,7 +34,7 @@ export default function Home() {
     },
   ];
 
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState<string>("");
 
   const separatorComponents = () => {
     return <View style={{ height: 1 }} />;
@@ -61,11 +61,19 @@ export default function Home() {
   return (
     <Container>
       <Title>Senhas</Title>
-      <Input
-        placeholder="Pesquisar senha..."
-        value={searchInput}
-        onChangeText={handleInputChange}
-      />
+      <View style={{ alignItems: "center", justifyContent: "center" }}>
+        <Feather
+          name="search"
+          size={24}
+          color="#828282"
+          style={{ alignSelf: "flex-end", position: "absolute", right: 22 }}
+        />
+        <Input
+          placeholder="Pesquisar senha..."
+          value={searchInput}
+          onChangeText={handleInputChange}
+        />
+      </View>
       <FlatList
         ItemSeparatorComponent={separatorComponents}
         ListEmptyComponent={emptyCardPassword}

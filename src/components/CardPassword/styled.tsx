@@ -6,7 +6,7 @@ export const Container = styled.View`
   background-color: #fff;
   flex-direction: row;
   align-items: center;
-  gap: 15px;
+  justify-content: space-between;
 `;
 export const ContainerName = styled.View`
   height: 65px;
@@ -19,5 +19,6 @@ export const ContainerName = styled.View`
 export const NameLetter = styled.Text`
   font-size: 26px;
   font-weight: bold;
+
   color: #fff;
 `;
