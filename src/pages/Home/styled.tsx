@@ -12,6 +12,7 @@ export const Container = styled.View`
 export const Title = styled.Text`
   font-size: 32px;
   font-weight: 600;
+  color: #545974;
 `;
 export const Input = styled.TextInput`
   width: 100%;

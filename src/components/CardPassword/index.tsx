@@ -20,7 +20,9 @@ export function CardPassword({ name, user, password }: TCardPassword) {
         </ContainerName>
         <View>
           <Text>{isShowing ? user : name}</Text>
-          <Text>{isShowing ? password : "**********"}</Text>
+          <Text style={{ color: "#545974" }}>
+            {isShowing ? password : "**********"}
+          </Text>
         </View>
       </View>
       <TouchableOpacity onPress={() => setIsShowing(!isShowing)}>
